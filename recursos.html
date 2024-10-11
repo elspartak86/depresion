@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Nunca hay fin, solo esperanza</title>
+    <link rel="stylesheet" href="recursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Recursos para la Depresión</h1>
+            <!-- Botón del menú hamburguesa -->
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="atencion.html">Atención Psicológica y Psiquiátra</a></li>
+                <li><a href="diagnostico.html">Diagnóstico y Tratamiento</a></li>
+                <li><a href="test.html">Test Sobre Depresión</a></li>
+                <li><a href="sintomas.html">Síntomas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="recursos-grid">
+            <div class="recurso-item">
+                <i class="fas fa-book"></i>
+                <h3>Lecturas Recomendadas</h3>
+                <p>Descubre libros y artículos que te ayudarán a comprender y manejar la depresión.</p>
+                <a href="lectura.html" class="btn-recurso">Ver Lecturas</a>
+            </div>
+            <div class="recurso-item">
+                <i class="fas fa-headphones-alt"></i>
+                <h3>Podcasts y Audiolibros</h3>
+                <p>Escucha contenido inspirador y educativo sobre salud mental.</p>
+                <a href="podcast.html" class="btn-recurso">Explorar Audio</a>
+            </div>
+            <div class="recurso-item">
+                <i class="fas fa-users"></i>
+                <h3>Grupos de Apoyo</h3>
+                <p>Encuentra comunidades en línea y presenciales para compartir experiencias.</p>
+                <a href="grupo.html" class="btn-recurso">Unirse a Grupos</a>
+            </div>
+            <div class="recurso-item">
+                <i class="fas fa-brain"></i>
+                <h3>Ejercicios de Mindfulness</h3>
+                <p>Practica técnicas de atención plena para reducir el estrés y la ansiedad.</p>
+                <a href="ejercicio.html" class="btn-recurso">Comenzar Práctica</a>
+            </div>
+            <div class="recurso-item">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Líneas de Ayuda</h3>
+                <p>Accede a números de emergencia y líneas de apoyo emocional 24/7.</p>
+                <a href="ayuda.html" class="btn-recurso">Ver Contactos</a>
+            </div>
+            <div class="recurso-item">
+                <i class="fas fa-laptop"></i>
+                <h3>Cursos en Línea</h3>
+                <p>Aprende estrategias de manejo de la depresión con cursos gratuitos.</p>
+                <a href="curso.html" class="btn-recurso">Explorar Cursos</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <h3>Nunca hay fin, solo esperanza. Unidos ante la Depresión</h3>
+                    <img src="img/depresión-removebg-preview (1).png" alt="Logo" class="logo">
+                </div>
+                <div class="footer-section links">
+                    <h3>Enlaces útiles</h3>
+                    <ul>
+                        <li><a href="#soporte">Soporte al usuario</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#terminos">Términos y condiciones</a></li>
+                        <li><a href="#privacidad">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contacto</h3>
+                    <p>Dirección: Calle AMLO, #123, Ciudad Milrra</p>
+                    <p>Email: info@antidepre.com</p>
+                    <p>Teléfono: +52 1368 552</p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Síguenos</h3>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nunca hay fin, solo esperanza. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Suscríbete a nuestro boletín</h3>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </footer> 
+    <script>
+    // Menú hamburguesa
+    document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const menu = document.querySelector('.menu');
+        
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                menu.classList.toggle('active');
+            });
+
+            // Cerrar el menú al hacer clic en un enlace
+            const menuLinks = document.querySelectorAll('.menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    menu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

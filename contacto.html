@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contacto - Nunca hay fin, solo esperanza</title>
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="atencion.html">Atención Psicológica y Psiquiátrica</a></li>
+                <li><a href="diagnostico.html">Diagnóstico y Tratamiento</a></li>
+                <li><a href="test.html">Test Sobre Depresión</a></li>
+                <li><a href="sintomas.html">Síntomas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros.</p>
+
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="tel" placeholder="Teléfono">
+                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <div class="support-message">
+                <h2>Mensaje de apoyo</h2>
+                <p id="mensaje-apoyo"></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nunca hay fin, solo esperanza. Unidos ante la Depresión</h3>
+                    <img src="img/depresión-removebg-preview (1).png" alt="Logo" style="max-width: 200px; height: auto;">
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces útiles</h3>
+                    <ul>
+                        <li><a href="#soporte">Soporte al usuario</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#terminos">Términos y condiciones</a></li>
+                        <li><a href="#privacidad">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle AMLO, #123, Ciudad Milrra</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@antidepre.com</p>
+                    <p><i class="fas fa-phone"></i> Teléfono: +52 1368 552</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nunca hay fin, solo esperanza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para menú hamburguesa -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+
+    <!-- Script para cambiar mensajes de apoyo -->
+    <script>
+        const mensajes = [
+            "Si estás luchando contra la depresión, recuerda que no estás solo. Hay esperanza y ayuda disponible.",
+            "Tu vida es valiosa y mereces sentirte mejor. No dudes en buscar apoyo profesional.",
+            "Hablar con alguien de confianza puede marcar una gran diferencia. Juntos podemos superar esto.",
+            "Cada pequeño paso cuenta en tu camino hacia la recuperación. No te rindas."
+        ];
+
+        let mensajeActual = 0;
+        const mensajeElemento = document.getElementById("mensaje-apoyo");
+
+        function cambiarMensaje() {
+            mensajeElemento.textContent = mensajes[mensajeActual];
+            mensajeActual = (mensajeActual + 1) % mensajes.length;
+        }
+
+        setInterval(cambiarMensaje, 9000); // Cambia el mensaje cada 5 segundos
+        cambiarMensaje(); // Muestra el primer mensaje al cargar la página
+    </script>
+</body>
+</html>

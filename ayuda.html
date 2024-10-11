@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Ayuda - Depresión</title>
+    <link rel="stylesheet" href="ayuda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Línea de Ayuda</div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <ul class="menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="atencion.html">Atención Psicológica y Psiquiátrica</a></li>
+                <li><a href="diagnostico.html">Diagnóstico y Tratamiento</a></li>
+                <li><a href="test.html">Test Sobre Depresión</a></li>
+                <li><a href="sintomas.html">Sintomas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Estamos aquí para ayudarte</h1>
+                <p>No estás solo. Nuestra línea de ayuda está disponible 24/7 para brindarte apoyo.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contacto</h2>
+            <div class="contact-options">
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Teléfono 24/7</h3>
+                    <p>+52 1368 552</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Correo Electrónico</h3>
+                    <p>ayuda@lineadeapoyo.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Chat 24/7</h3>
+                    <button id="open-chat">Abrir Chat</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="signs" class="container">
+            <h2>Cuándo buscar ayuda</h2>
+            <ul class="signs-list">
+                <li>Sentimientos persistentes de tristeza o desesperanza</li>
+                <li>Pérdida de interés en actividades que antes disfrutabas</li>
+                <li>Cambios significativos en los patrones de sueño o apetito</li>
+                <li>Dificultad para concentrarse o tomar decisiones</li>
+                <li>Pensamientos recurrentes sobre la muerte o el suicidio</li>
+            </ul>
+        </section>
+
+        <section id="encouragement" class="container">
+            <h2>Mensajes de Aliento</h2>
+            <div class="encouragement-container">
+                <p class="encouragement-message">Eres más fuerte de lo que crees.</p>
+                <button id="new-message">Nuevo Mensaje</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="chat-container" class="hidden">
+        <div id="chat-header">
+            <h3>Chat de Ayuda</h3>
+            <button id="close-chat">X</button>
+        </div>
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+        <button id="send-message">Enviar</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <h3>Nunca hay fin, solo esperanza. Unidos ante la Depresión</h3>
+                    <img src="img/depresión-removebg-preview (1).png" alt="Logo" class="logo">
+                </div>
+                <div class="footer-section links">
+                    <h3>Enlaces útiles</h3>
+                    <ul>
+                        <li><a href="#soporte">Soporte al usuario</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#terminos">Términos y condiciones</a></li>
+                        <li><a href="#privacidad">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contacto</h3>
+                    <p>Dirección: Calle AMLO, #123, Ciudad Milrra</p>
+                    <p>Email: info@antidepre.com</p>
+                    <p>Teléfono: +52 1368 552</p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Síguenos</h3>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nunca hay fin, solo esperanza. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Suscríbete a nuestro boletín</h3>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ayuda.js"></script>
+</body>
+</html>

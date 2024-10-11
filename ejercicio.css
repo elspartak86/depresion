@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header  */
+header {
+    background: #3a506b;
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+/* Menú */
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    padding: 0 15px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #a3c1ad;
+}
+
+#menu-toggle, .menu-icon {
+    display: none;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(58, 80, 107, 0.8), rgba(58, 80, 107, 0.8)), url();
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Lora', serif;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Secciones principales */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    color: #3a506b;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Ejercicios */
+.exercise {
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.exercise:hover {
+    transform: translateY(-5px);
+}
+
+.exercise h3 {
+    color: #5b7d87;
+    margin-bottom: 1rem;
+}
+
+/* Formulario de contacto */
+#contact {
+    background-color: #e8eef1;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    background: #3a506b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #5b7d87;
+}
+
+/* Footer */
+footer {
+    background: #3a506b;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 1rem;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #a3c1ad;
+    margin-bottom: 1rem;
+}
+
+.footer-section.brand img {
+    max-width: 100px;
+}
+
+.footer-section.links ul {
+    list-style: none;
+}
+
+.footer-section.links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section.links a:hover {
+    color: #a3c1ad;
+}
+
+.footer-section.social a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section.social a:hover {
+    color: #a3c1ad;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #5b7d87;
+}
+
+.footer-subscribe form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-subscribe input[type="email"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    min-width: 200px;
+}
+
+/* Responsive diseño */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #3a506b;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .exercise {
+        padding: 1.5rem;
+    }
+
+    #contact {
+        padding: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-subscribe input[type="email"],
+    .footer-subscribe button {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .exercise h3 {
+        font-size: 1.2rem;
+    }
+}

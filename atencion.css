@@ -1,0 +1,289 @@
+* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+/* Menú lateral */
+.side-menu {
+    width: 250px;
+    height: 100%;
+    background: whitesmoke;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: 0.3s;
+}
+
+/* Contenido principal */
+main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+.atencion-info h2, .appointment-form h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.service-card a:hover {
+    color: #2980b9;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+    font-size: 3em;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.service-card p {
+    color: #7f8c8d;
+}
+
+/* Formulario de cita */
+.appointment-form {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-submit {
+    background: #3498db;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #2980b9;
+}
+
+/* ...Footer... */
+footer {
+    background-color: rgba(53, 66, 74, 0.9);
+    color: #ffffff;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 1rem;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section.brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-section.links ul {
+    list-style: none;
+}
+
+.footer-section.links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section.links a:hover {
+    color: #e8491d;
+}
+
+.footer-section.social a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-subscribe form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.footer-subscribe input[type="email"] {
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+
+.footer-subscribe button {
+    background-color: #e8491d;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.footer-section.brand .brand-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.footer-section.brand h3 {
+    margin: 0; 
+    flex: 1; 
+}
+
+.footer-section.brand .logo {
+    max-width: 175px; 
+    height: auto;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .side-menu {
+        width: 100%;
+        left: -100%;
+    }
+
+    .side-menu.active {
+        left: 0;
+    }
+
+    main.shifted {
+        margin-left: 0;
+    }
+}
+
+/* Media query para tablets y dispositivos más grandes */
+@media screen and (min-width: 769px) {
+    main.shifted {
+        margin-left: 250px;
+    }
+
+    .menu-toggle.active {
+        left: 270px;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo de Apoyo - Nunca hay fin, solo esperanza</title>
+    <link rel="stylesheet" href="grupo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Grupo de Apoyo</h1>
+        </div>
+    </header>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="recursos.html"><i class="fas fa-book"></i> Recursos</a></li>
+            <li><a href="atencion.html"><i class="fas fa-user-md"></i> Atención Médica</a></li>
+            <li><a href="diagnostico.html"><i class="fas fa-stethoscope"></i> Diagnóstico</a></li>
+            <li><a href="test.html"><i class="fas fa-clipboard-list"></i> Test</a></li>
+            <li><a href="sintomas.html"><i class="fas fa-notes-medical"></i> Síntomas</a></li>
+            <li class="active"><a href="grupo.html"><i class="fas fa-users"></i> Grupo de Apoyo</a></li>
+            <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" id="main-content">
+        <section class="group-info">
+            <h2>Bienvenido a Nuestro Grupo de Apoyo</h2>
+            <p>Aquí encontrarás un espacio seguro para compartir experiencias, recibir apoyo y conectar con personas que entienden por lo que estás pasando.</p>
+        </section>
+
+        <section class="meeting-details">
+            <h3>Próxima Reunión</h3>
+            <p><i class="fas fa-calendar-alt"></i> Fecha: Todos los martes</p>
+            <p><i class="fas fa-clock"></i> Hora: 19:00 - 20:30</p>
+            <p><i class="fas fa-map-marker-alt"></i> Lugar: Centro Comunitario Local / Zoom (enlace proporcionado al registrarse)</p>
+        </section>
+
+        <section class="join-group">
+            <h3>Únete a Nosotros</h3>
+            <p>Para participar en nuestro grupo de apoyo, por favor regístrate utilizando el siguiente formulario:</p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono (opcional):</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <button type="submit" class="btn-submit">Registrarse</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <h4>Nunca hay fin, solo esperanza. Unidos ante la Depresión</h4>
+                    <img src="img/depresión-removebg-preview (1).png" alt="Logo" class="logo">
+                </div>
+                <div class="footer-section links">
+                    <h4>Enlaces útiles</h4>
+                    <ul>
+                        <li><a href="#soporte">Soporte al usuario</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#terminos">Términos y condiciones</a></li>
+                        <li><a href="#privacidad">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h4>Contacto</h4>
+                    <p>Dirección: Calle AMLO, #123, Ciudad Milrra</p>
+                    <p>Email: info@antidepre.com</p>
+                    <p>Teléfono: +52 1368 552</p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Síguenos</h3>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nunca hay fin, solo esperanza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+            //  menú 
+        document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
+    const mainContent = document.getElementById('main-content');
+
+    menuToggle.addEventListener('click', function() {
+        sideMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        mainContent.classList.toggle('shifted');
+    });
+
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = sideMenu.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnToggle && sideMenu.classList.contains('active')) {
+            sideMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+            mainContent.classList.remove('shifted');
+        }
+    });
+});
+    </script>
+</body>
+</html>

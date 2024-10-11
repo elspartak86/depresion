@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atención Médica - Nunca hay fin, solo esperanza</title>
+    <link rel="stylesheet" href="atencion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Atención Psicológica y Psiquiátrica</h1>
+        </div>
+    </header>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="recursos.html"><i class="fas fa-book"></i> Recursos</a></li>
+            <li class="active"><a href="atencion.html"><i class="fas fa-user-md"></i> Atención Médica</a></li>
+            <li><a href="diagnostico.html"><i class="fas fa-stethoscope"></i> Diagnóstico</a></li>
+            <li><a href="test.html"><i class="fas fa-clipboard-list"></i> Test Sobre Depresión</a></li>
+            <li><a href="sintomas.html"><i class="fas fa-notes-medical"></i> Síntomas</a></li>
+            <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="atencion-info">
+            <h2>Nuestros Servicios de Atención</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <a href="psicologia_clinica.html">
+                        <i class="fas fa-brain"></i>
+                        <h3>Psicología Clínica</h3>
+                        <p>Terapia individual y grupal para abordar problemas emocionales y de comportamiento.</p>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <a href="psiquiatria.html">
+                        <i class="fas fa-pills"></i>
+                        <h3>Psiquiatría</h3>
+                        <p>Evaluación y tratamiento médico para trastornos mentales, incluyendo manejo de medicación.</p>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <a href="terapia-cognitiva.html">
+                        <i class="fas fa-comments"></i>
+                        <h3>Terapia Cognitivo-Conductual</h3>
+                        <p>Enfoque terapéutico centrado en modificar patrones de pensamiento y comportamiento negativos.</p>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <a href="terapia-familiar.html">
+                        <i class="fas fa-users"></i>
+                        <h3>Terapia Familiar</h3>
+                        <p>Sesiones para mejorar la comunicación y resolver conflictos dentro del entorno familiar.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="appointment-form">
+            <h2>Solicitar Cita</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Tipo de servicio:</label>
+                    <select id="service" name="service" required>
+                        <option value="">Seleccione un servicio</option>
+                        <option value="psicologia">Psicología Clínica</option>
+                        <option value="psiquiatria">Psiquiatría</option>
+                        <option value="tcc">Terapia Cognitivo-Conductual</option>
+                        <option value="familiar">Terapia Familiar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje (opcional):</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Solicitar Cita</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <h3>Nunca hay fin, solo esperanza. Unidos ante la Depresión</h3>
+                    <img src="img/depresión-removebg-preview (1).png" alt="Logo" class="logo">
+                </div>
+                <div class="footer-section links">
+                    <h3>Enlaces útiles</h3>
+                    <ul>
+                        <li><a href="#soporte">Soporte al usuario</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#terminos">Términos y condiciones</a></li>
+                        <li><a href="#privacidad">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contacto</h3>
+                    <p>Dirección: Calle AMLO, #123, Ciudad Milrra</p>
+                    <p>Email: info@antidepre.com</p>
+                    <p>Teléfono: +52 1368 552</p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Síguenos</h3>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nunca hay fin, solo esperanza. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Suscríbete a nuestro boletín</h3>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
+    const mainContent = document.getElementById('main-content');
+
+    menuToggle.addEventListener('click', function() {
+        sideMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        mainContent.classList.toggle('shifted');
+    });
+
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = sideMenu.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnToggle && sideMenu.classList.contains('active')) {
+            sideMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+            mainContent.classList.remove('shifted');
+        }
+    });
+});
+    </script>
+</body>
+</html>

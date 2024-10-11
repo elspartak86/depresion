@@ -1,0 +1,263 @@
+* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('img/apoyo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background: rgba(44, 62, 80, 0.8);
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+/* Menú lateral */
+.side-menu {
+    width: 250px;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.9);
+    position: fixed;
+    top: 0;
+    left: -250px;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 10px;
+}
+
+.side-menu ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+    font-weight: 300;
+}
+
+.side-menu ul li a:hover {
+    background-color: rgba(44, 62, 80, 0.8);
+}
+
+.side-menu ul li.active a {
+    background-color: rgba(52, 152, 219, 0.8);
+    font-weight: 400;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Contenido principal */
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.group-info, .meeting-details, .join-group {
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Formulario */
+h4 {
+    color: whitesmoke;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background: #3498db;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #2980b9;
+}
+
+/* ...Footer... */
+footer {
+    background-color: rgba(53, 66, 74, 0.9);
+    color: #ffffff;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 1rem;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section.brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-section.links ul {
+    list-style: none;
+}
+
+.footer-section.links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section.links a:hover {
+    color: #e8491d;
+}
+
+.footer-section.social a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-subscribe form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.footer-subscribe input[type="email"] {
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+
+.footer-subscribe button {
+    background-color: #e8491d;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.footer-section.brand .brand-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre el texto y la imagen */
+}
+
+.footer-section.brand h3 {
+    margin: 0; /* Elimina el margen predeterminado del h3 */
+    flex: 1; /* Permite que el texto ocupe el espacio disponible */
+}
+
+.footer-section.brand .logo {
+    max-width: 175px; /* Ajusta este valor según el tamaño deseado para tu logo */
+    height: auto;
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .side-menu {
+        width: 100%;
+        left: -100%;
+    }
+
+    .side-menu.active {
+        left: 0;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin: 1rem 0;
+    }
+}
